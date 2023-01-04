@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Denklem
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> A Değerini Giriniz : </td>
+                    <td>@Html.EditorFor(deger => deger.A_Deger)</td>
+                </tr>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> B Değerini Giriniz : </td>
+                    <td>@Html.EditorFor(deger => deger.B_Deger)</td>
+                </tr>
+                 <tr>
+                    <td style="color:darkblue;font-size:20px;"> C Değerini Giriniz : </td>
+                    <td>@Html.EditorFor(deger => deger.C_Deger)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Delta ve Kök Değerlerini Hesapla" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.Message</td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
